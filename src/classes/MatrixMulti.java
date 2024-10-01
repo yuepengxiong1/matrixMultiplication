@@ -8,13 +8,11 @@ public class MatrixMulti{
     public MatrixMulti(String[] a, String[] b){
         set1 = a;
         set2 = b;
-
-        for(int i = 0; i < set1.length; i++){
-            for(int j = 0; j < set1.length; i++){
-                resultString += 
-            }
-        }
     }
+/* 
+    public string compute(){
 
-    
+        return string;
+    }
+        */
 }

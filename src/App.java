@@ -8,37 +8,45 @@
  * 
  * 
  */
-import java.io.File;
 import java.util.Scanner;
-import classes.matrixMulti;
+
+
 
 
 
 public class App {
     public static void main(String[] args) throws Exception {
-        File file1 = new File("tester");
-        File file2 = new File("");
-        int maxNumbers; // sets the maximum length of the next array so there is no extra calculation
-        String input; //takes user input as a string
-        String[] array1;//populates the array based on input and spaces
-        String[] array2;
+        //File file1 = new File("tester");
+        //File file2 = new File("");
         Scanner scanner = new Scanner(System.in);
+        int setMatrixRowColumn;
 
 
-        //this if statement checks if user passes any files through command line.
-        //if they didnt, this will ask for the user to input numbers
-        if (args.length == 0){
-            System.out.print("Enter the first set of integers for the first array (do not press enter): ");
-            input = scanner.nextLine();
-            array1 = input.split(" "); //this sets array1 to input and populates each element for every space
-            maxNumbers = array1.length; 
-            input = ""; //resets input
-            
-            System.out.print("Enter the second set of integers for the second array (max " + maxNumbers + ", do not press enter. Extras will be ignored):");
-            input = scanner.nextLine();
-            array2 = input.split(" ");
-            
-            System.out.println(matrixMulti(array1, array2));
+        System.out.println(args.length);
+        //first checks if there are 2 aruments passed in
+        if(args.length == 0){
+            System.out.println("Nothing was passed in through command line. Enter a number or 2 files.");
+
+        } else if (args.length == 1){
+            setMatrixRowColumn = Integer.parseInt(args[0]);
+            System.out.println(setMatrixRowColumn);
+            int[][] array1 = new int[setMatrixRowColumn][setMatrixRowColumn];
+            int[][] array2 = new int[setMatrixRowColumn][setMatrixRowColumn];
+
+            for (int i = 0; i < setMatrixRowColumn; i++){
+                for(int j = 0; j <setMatrixRowColumn; j++){
+                    array1[i][j] = (int)(Math.random() * 100);
+                }
+            }
+
+            for (int i = 0; i < setMatrixRowColumn; i++){
+                for(int j = 0; j <setMatrixRowColumn; j++){
+                    System.out.println("Output of row " + i + " colomn " + j + ": " + array1[i][j]);
+                }
+            }
         }
+    
+
+      
     }
 }
