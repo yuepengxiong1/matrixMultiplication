@@ -1,5 +1,6 @@
 ## Getting Started
 
+(please view in editor, i cant be bothered to format this on github)
 How to use:
 
 Run the matrixMultiplication.jar file to get started.
