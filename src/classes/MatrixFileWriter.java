@@ -25,8 +25,6 @@ public class MatrixFileWriter {
          */
 
         try (BufferedWriter writer = new BufferedWriter(new FileWriter("matrix" + arrayNumber + ".txt"))) {
-            //writer.write(row + " by " + column);
-           // writer.newLine();
             for (int i = 0; i < array.length; i++) {
                 for (int j = 0; j < array[i].length; j++) {
                     writer.write(array[i][j] + " ");
