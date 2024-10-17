@@ -1,13 +1,14 @@
 ## Getting Started
-
-(please view in editor, i cant be bothered to format this on github)
-How to use:
-
-Run the matrixMultiplication.jar file to get started.
+Use this command to start the program:
+```
+java -jar --enable-preview matrixMultiplication.jar [textfile1] [textfile2]
+OR
+java -jar --enable-preview matrixMultiplication.jar [integer number]
+```
 
 Pass in 2 text files seperated by a space OR pass in ONE integer value after the .jar text at the end of command.
-
 Examples of output using 2 arguments:
+```
 java -jar --enable-preview matrixMultiplication.jar array1.txt array2.txt
 
 Array1 is: 2 by 2
@@ -33,9 +34,10 @@ Calculation for Array3 (1,1): 280 = 80 added with 5 x 40
 Calculation for Array3 (1,1): Is finished
 Array3 has been written to file.
 Program has ended. Press enter to exit.
-
+```
 
 Example of passing in 1 integer:
+```
 java -jar --enable-preview matrixMultiplication.jar 2
 Creating 2 matries of: 1 by 2 and 2 by 2
 User submitted row/column match: 2
@@ -50,9 +52,10 @@ Array3 has been written to file.
 Array1 has been written to file.
 Array2 has been written to file.
 Program has ended. Press enter to exit.
-
+```
 
 Example of including a irregular Matrix:
+```
 java -jar --enable-preview matrixMultiplication.jar array1.txt array2.txt
 The number of columns in Array1 are not the same as rows in Array2. They must be the same to perform matrix multiplication.
 One or both of the arrays are not a square/rectangle (Its possible that its IRREGULAR). They must be square/rectangle to perform matrix multiplication.
@@ -60,9 +63,10 @@ Report:
 Array1 is square/rectangle?: false
 Array2 is square/rectangle?: true
 Program has ended. Press enter to exit.
-
+```
 
 Example of both arrays with no matching row/column:
+```
 java -jar --enable-preview matrixMultiplication.jar array1.txt array2.txt
 The number of columns in Array1 are not the same as rows in Array2. They must be the same to perform matrix multiplication.
 One or both of the arrays are not a square/rectangle (Its possible that its IRREGULAR). They must be square/rectangle to perform matrix multiplication.
@@ -70,3 +74,4 @@ Report:
 Array1 is square/rectangle?: false
 Array2 is square/rectangle?: true
 Program has ended. Press enter to exit.
+```
